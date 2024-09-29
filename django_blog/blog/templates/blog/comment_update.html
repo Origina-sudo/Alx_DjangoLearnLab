@@ -1,0 +1,8 @@
+<h1>Update Comment</h1>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save Changes</button>
+    <a href="{% url 'comment_delete' post.id %}">Delete Comment</a>
+</form>
